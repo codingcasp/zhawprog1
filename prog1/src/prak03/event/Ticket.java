@@ -1,4 +1,4 @@
-package prak3;
+package prak03.event;
 
 public class Ticket {
 	

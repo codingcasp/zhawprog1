@@ -1,4 +1,4 @@
-package prak03;
+package prak03.uhr;
 
 /**
  * Die Klasse Nummernanzeige repräsentiert Darstellungen von

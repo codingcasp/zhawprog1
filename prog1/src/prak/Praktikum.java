@@ -1,12 +1,15 @@
 package prak;
 
-// prakitkum 01
+// prakitkum 02
 import prak02.Car;
 
-// prakitkum 02
-import prak03.Nummernanzeige;
-import prak03.Uhrenanzeige;
-import prak03.UhrenanzeigeCrap;
+// prakitkum 03
+import prak03.uhr.Nummernanzeige;
+import prak03.uhr.Uhrenanzeige;
+import prak03.uhr.UhrenanzeigeCrap;
+import prak03.event.Artist;
+import prak03.event.Event;
+import prak03.event.Ticket;
 
 public class Praktikum {
 
@@ -29,7 +32,7 @@ public class Praktikum {
 //		manualCar.outCarInformation();
 		
 		/**
-		 * Praktikum 03
+		 * Praktikum 03 - Uhr
 		 */
 		Uhrenanzeige uhr = new Uhrenanzeige();
 		for(int i=0; i<1000; i++){
@@ -42,5 +45,11 @@ public class Praktikum {
 			uhrCrap.taktsignalGeben();
 			System.out.println(uhrCrap.gibUhrzeit());
 		}
+		
+		/**
+		 * Praktikum 03 - Event
+		 */
+		
+		
 	}
 }

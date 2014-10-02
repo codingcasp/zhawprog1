@@ -1,4 +1,4 @@
-package prak03;
+package prak03.uhr;
 
 /**
  * Die Klassen Uhrenanzeige implementiert die Anzeige einer Digitaluhr.
