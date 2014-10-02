@@ -1,5 +1,7 @@
 package prak02;
 
+import java.util.Scanner;
+
 public class Car {
 
 	private String brand;
@@ -24,7 +26,7 @@ public class Car {
 		this.ccm = ccm;
 		this.hasTurbo = hasTurbo;
 		System.out.println("======");
-		System.out.println("Neues Fahrzeug "+this.brand + " " + this.type + ", (" + this.ccm + " Liter) reigistriert.");
+		System.out.println("Neues Fahrzeug "+this.brand + " " + this.type + ", (" + this.ccm + " Liter) registriert.");
 	}
 
 	/**
@@ -168,5 +170,72 @@ public class Car {
 			System.out.println(outline1 + "\n" + outline2 + "\n" + outline3);
 			System.out.println("------");
 		}
+	}
+	
+	
+	/**
+	 * Validates a string has more than 3 to 10 characters.
+	 * @param string
+	 * @return
+	 */
+	public boolean checkStringLength(String string){
+		if(string.length() < 3 || string.length() > 10) {
+			System.out.println("Ungültige Eingage, " + string.length() + " Zeichen, 3 bis 10 erlaubt.");
+			return false;
+		}
+		return true;
+	}
+	
+	
+	public Car inputCar() {
+		Scanner user_input = new Scanner( System.in );
+		System.out.println("Manuelle Eingabe!");
+		
+		// brand
+		do {
+			System.out.println("Marke (3 bis 10 Zeichen):");
+			brand = user_input.next();
+		} while(checkStringLength(brand) == false);
+		
+		// type
+		do {
+			System.out.println("Type (3 bis 10 Zeichen):");
+			type = user_input.next();
+		} while(checkStringLength(type) == false);
+		
+		// ccm
+		String _ccm;
+		double ccm;
+		do {
+			System.out.println("Hubraum (0.5 bis 8):");
+			_ccm = user_input.next();
+			ccm = Double.parseDouble(_ccm);
+		} while(ccm < 0.5 || ccm > 8);
+		
+		// has turbo
+		String _hasTurbo;
+//		do {
+			System.out.println("Turbo (yes/no):");
+			_hasTurbo = user_input.next().toLowerCase();
+			System.out.println("Turbo Eingabe: '" + _hasTurbo + "'");
+//		} while(_hasTurbo != "yes" && _hasTurbo != "no");
+		
+		if(_hasTurbo == "yes") {
+			hasTurbo = true;
+		} else {
+			hasTurbo = false;
+		}
+		
+		// starageAmount
+		String _change;
+		int change;
+//		do {
+//			System.out.println("Bestand (1 bis 10):");
+//			_change = user_input.next();
+//			_change = String.parseDouble(_change);
+//		} while(change < 1 || change > 10);
+		
+		Car manualCar = new Car(brand, type, ccm, hasTurbo);
+		return manualCar;
 	}
 }
