@@ -1,0 +1,11 @@
+1. Die Programmierung mittels zwei Klassen ist hier deutlich besser gewählt. Die Logik der Zeit (Stunden, Minuten) ist klar von der Logik der Applikation selbst getrennt. Somit kann bei der Zweiklassen-Lösung für die Abhandlung der Limite eine Methode verwendet werden.
+Eine Implementation der Sekunden ist bei der Zweiklassen-Lösung ist auch durch 1 Zeile und ohne Eingriff in die Klasse Nummernanzeige() möglich. Bei der Einklassen-Lösung muss die Logik selbst erweitert werden.
+
+2. a)
+- Uhrenanzeige Datenfeld erzeugen. Konstruktor und Methoden Parameter erweitern. Zeitanzeige anpassen
+- Die Klasse Nummernanzeige musste nicht geändert werden.
+2. b)
+- So ziemlich alles musste umständlich erweitert und geändert werden.
+2. c)
+- Die Einklassen-Lösung ist umständindlicher anzupassen, da wir alle Werte (Stunden, Minuten und Sekunden) einzeln verarbeiten. Bei der Zweiklassen-Lösung hingegen können wir alle Ausgaben an einer Stelle verändern.
+2. d) Auslagern = Godlike! Redundanz = Noob!
