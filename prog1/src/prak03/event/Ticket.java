@@ -25,7 +25,7 @@ public class Ticket {
 			
 			return total_price;
 		} else {
-			System.out.println("Can not buy " + amount + " tickets. Only " + this.available + " tickets available.");
+			System.out.println("Can not buy " + amount + " tickets. Only " + this.available + " '" + this.category + "' tickets available.");
 			return 0;
 		}
 	}
