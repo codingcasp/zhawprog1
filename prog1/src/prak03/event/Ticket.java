@@ -19,7 +19,7 @@ public class Ticket {
 	public int buyTicket(int amount){
 		if(this.available >= amount) {
 			int total_price = amount * this.price;
-			this.sold = this.sold - amount;
+			this.sold = this.sold + amount;
 			this.available = this.available - amount;
 			System.out.println("Bought " + amount + " tickets for CHF " + total_price + ".");
 			
