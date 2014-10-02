@@ -18,9 +18,14 @@ public class Ticket {
 	
 	public int buyTicket(int amount){
 		if(this.available >= amount) {
+			int total_price = amount * this.price;
 			this.sold = this.sold - amount;
-			return amount * this.price;
+			this.available = this.available - amount;
+			System.out.println("Bought " + amount + " tickets for CHF " + total_price + ".");
+			
+			return total_price;
 		} else {
+			System.out.println("Can not buy " + amount + " tickets. Only " + this.available + " tickets available.");
 			return 0;
 		}
 	}
