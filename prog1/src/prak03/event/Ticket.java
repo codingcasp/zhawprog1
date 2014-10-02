@@ -16,7 +16,7 @@ public class Ticket {
 		this.sold = 0;
 	}
 	
-	public int checkTicketAvailable(int amount){
+	public int buyTicket(int amount){
 		if(this.available >= amount) {
 			this.sold = this.sold - amount;
 			return amount * this.price;
