@@ -16,6 +16,15 @@ public class Ticket {
 		this.sold = 0;
 	}
 	
+	public int checkTicketAvailable(int amount){
+		if(this.available >= amount) {
+			this.sold = this.sold - amount;
+			return amount * this.price;
+		} else {
+			return 0;
+		}
+	}
+	
 	
 	public String getCategory() {
 		return category;
