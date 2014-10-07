@@ -49,6 +49,17 @@ public class Praktikum {
 		/**
 		 * Praktikum 03 - Event
 		 */
+		Event myEvent = new Event(new Artist("Michael Jackson", 1000000),
+									new Ticket("VIP", 2000, 200),
+									new Ticket("Tribune", 100, 1000),
+									new Ticket("Stance", 50, 5000)				
+		);
+		myEvent.setEventTitle("Superevent by Jones Event Company");
+		myEvent.buyTickets("VIP",50);
+		myEvent.buyTickets("Tribune", 100);
+		myEvent.buyTickets("Stance", 1000);
+		myEvent.printData();
+		
 		
 		
 	}
