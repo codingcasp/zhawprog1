@@ -1,0 +1,24 @@
+Aufgabe 1
+Ein Split auf die Floatzahl x.x. Ein Array mit den Textausgaben zu der jeweiligen Zahl, 0 bis 6.
+
+private static String[] noten = new String[7];
+public NotenListe() {
+	noten[0] = "null";
+	noten[1] = "eins";
+	noten[2] = "zwei";
+	noten[3] = "frei";
+	noten[4] = "vier";
+	noten[5] = "fuenf";
+	noten[6] = "sechs";
+}
+
+
+Aufgabe 2
+Auf der Zeile 1 der Methode eineMethode() wird die final Klassen-Variable "nummer" überschrieben, das geht so nicht, final = final.
+Auf der Zeile 3 wird die Klassen-Variable "nummer" der Klasse "MeinObjekt" überschrieben, welche nicht final ist, also geht das.
+
+
+Aufgabe 3
+Die Klassen-Variable "kennzeichen" ist public. Ein setter und getter für diese Variable wäre angebracht. Die setzende Method "setAutokennzeichen"
+sollte void sein.
+
